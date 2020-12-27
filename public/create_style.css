@@ -1,0 +1,56 @@
+body{
+    max-width: 1000px;
+    direction: rtl;
+    text-align: initial;
+    margin: 10px 200px 200px 10px;
+    font-family: serif;
+    
+}
+ 
+img{
+    max-height: 200px;
+    padding-right: 60px;
+}
+.column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
+form{
+    font-size: 20px;
+    border-radius: 30px;
+  border: 2px solid #192a56;
+  padding: 20px;
+  width: 1000px;
+  height: 100%;
+  background-image: image('');
+}
+#nat{
+    max-width: 200px;
+}
+#un_id{
+    width:225px;
+}
+#ye_st{
+    width:175px;
+}
+#ex{
+    width: 120px;
+}
+#yr{
+    width: 110px;
+}
+#dg{
+    width: 80px;
+}
