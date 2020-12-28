@@ -36,7 +36,7 @@ class CreateDocumentsTypesTable extends Migration
         $table->unsignedBigInteger('office_id');
         $table->integer('seq');
         $table->timestamps();
-        $table->unique(['document_type_id','office_id']);
+        // $table->unique(['document_type_id','office_id']);
         });
 
         DB::insert('insert into document_type_office (id, document_type_id, office_id, seq) values (?, ?, ?, ?)', [1, 1, 1, 1]);
