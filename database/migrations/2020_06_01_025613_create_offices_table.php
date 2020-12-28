@@ -20,11 +20,11 @@ class CreateOfficesTable extends Migration
             $table->timestamps();
         });
 
-        DB::insert('insert into users (id, name) values (?, ?)', [1, 'شؤون الطلاب']);
-        DB::insert('insert into users (id, name) values (?, ?)', [2, 'الامتحانات']);
-        DB::insert('insert into users (id, name) values (?, ?)', [3, 'العميد']);
-        DB::insert('insert into users (id, name) values (?, ?)', [4, 'النافذة الواحدة']);
-        DB::insert('insert into users (id, name) values (?, ?)', [5, 'رئيس الدائرة']);
+        DB::insert('insert into offices (id, name) values (?, ?)', [1, 'شؤون الطلاب']);
+        DB::insert('insert into offices (id, name) values (?, ?)', [2, 'الامتحانات']);
+        DB::insert('insert into offices (id, name) values (?, ?)', [3, 'العميد']);
+        DB::insert('insert into offices (id, name) values (?, ?)', [4, 'النافذة الواحدة']);
+        DB::insert('insert into offices (id, name) values (?, ?)', [5, 'رئيس الدائرة']);
 
 
     }
