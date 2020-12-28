@@ -24,7 +24,6 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-        DB::insert('insert into users (id, office_id, name, email, password) values (?, ?, ?, ?, ?)', [1, 4, 'onewindowuser', 'onewindowuser@example.com', '12345678']);
     }
 
     /**

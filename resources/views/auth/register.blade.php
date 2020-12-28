@@ -40,6 +40,27 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="office" class="col-md-4 col-form-label text-md-right">{{ __('Office') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="office" class="form-control" name="office">
+                                    <option value="">Choose Office to register</option>
+                                    <option value="4">مكتب النافذة الواحدة</option>
+                                    <option value="2">مكتب شعبة الامتحانات</option>
+                                    <option value="1">مكتب شعبة شؤون الطلاب</option>
+                                    <option value="5">مكتب رئيس الدائرة</option>
+                                    <option value="3">مكتب العميد</option>
+                                  </select>
+
+                                @error('office')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
