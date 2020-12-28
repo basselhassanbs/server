@@ -136,7 +136,7 @@ class RequestDocController extends Controller
                 $requestoperation->moveDocument($document);
                 $office = Office::find($document->office_id);
                 return redirect('/requests')->with([
-                    'message' => 'تم الإرسال بنجاح'. $office->name,
+                    'message' => 'تم الإرسال بنجاح إلى مكتب '. $office->name,
                     'alert-type' => 'success'
                 ]);
             }

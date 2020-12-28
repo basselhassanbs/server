@@ -192,7 +192,7 @@ class DocumentsController extends Controller
             $documentsadd->moveDocument($document);
             $office = Office::find($document->office_id);
             return redirect('/documents')->with([
-                'message' => 'تم الإرسال بنجاح'. $office->name ,
+                'message' => 'تم الإرسال بنجاح إلى مكتب '. $office->name ,
                 'alert-type' => 'success'
             ]);
         }
