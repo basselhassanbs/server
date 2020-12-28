@@ -43,7 +43,7 @@
                             <label for="office" class="col-md-4 col-form-label text-md-right">{{ __('Office') }}</label>
 
                             <div class="col-md-6">
-                                <select id="office" class="form-control" name="office">
+                                <select class="form-control" name="office">
                                     <option value="">Choose Office to register</option>
                                     <option value="4">مكتب النافذة الواحدة</option>
                                     <option value="2">مكتب شعبة الامتحانات</option>
