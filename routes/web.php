@@ -14,13 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-	// return view('uptodocument.pdf');
-	// return view('uptodocument.create2');
     return view('welcome');//welcome
-});
-
-Route::get('/time', function () {
-    return view('documentscreate.timecreate');
 });
 
 Auth::routes();
