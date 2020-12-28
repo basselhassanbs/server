@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Office;
 use App\RequestDoc;
 use App\RequestOperation;
 use Illuminate\Http\Request;
@@ -133,8 +134,9 @@ class RequestDocController extends Controller
             $requestoperation = new RequestOperation;
             if($document){
                 $requestoperation->moveDocument($document);
+                $office = Office::find($document->office_id);
                 return redirect('/requests')->with([
-                    'message' => 'تم الإرسال بنجاح',
+                    'message' => 'تم الإرسال بنجاح'. $office->name,
                     'alert-type' => 'success'
                 ]);
             }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Document;
 use App\User;
 use App\Documentsadd;
+use App\Office;
 use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -189,8 +190,9 @@ class DocumentsController extends Controller
         $documentsadd = new Documentsadd;
         if($document){
             $documentsadd->moveDocument($document);
+            $office = Office::find($document->office_id);
             return redirect('/documents')->with([
-                'message' => 'تم الإرسال بنجاح',
+                'message' => 'تم الإرسال بنجاح'. $office->name ,
                 'alert-type' => 'success'
             ]);
         }
